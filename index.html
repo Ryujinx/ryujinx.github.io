@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Ryujinx - Nintendo Switch Emulator</title><meta name="gridsome:hash" content="102ea5fa991588a3ff11c5f3111f2bf56cb34192"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><meta data-vue-tag="ssr" name="google-site-verification" content="6-jOQTZMaaKrCTbkRoghe5Pd1kbYhyGpOTAgUhoT9HA"><meta data-vue-tag="ssr" data-key="description" name="description" content="Ryujinx is an open source Nintendo Switch emulator written in C# for Windows and Linux."><meta data-vue-tag="ssr" name="author" content="Ryujinx"><meta data-vue-tag="ssr" name="copyright" content="Ryujinx"><meta data-vue-tag="ssr" name="keywords" content="ryujinx, switch, nintendo switch, emulator, home"><meta data-vue-tag="ssr" name="description" content="Ryujinx is an open source Nintendo Switch emulator written in C# for Windows and Linux."><meta data-vue-tag="ssr" property="og:type" content="website"><meta data-vue-tag="ssr" property="og:locale" content="en_US"><meta data-vue-tag="ssr" property="og:site_name" content="Ryujinx"><meta data-vue-tag="ssr" property="og:title" content="Ryujinx - Nintendo Switch Emulator"><meta data-vue-tag="ssr" property="og:description" content="Ryujinx is an open source Nintendo Switch emulator written in C# for Windows and Linux."><meta data-vue-tag="ssr" property="og:image" content="https://ryujinx.org/public/logo.png"><meta data-vue-tag="ssr" property="og:url" content="https://ryujinx.org/"><meta data-vue-tag="ssr" name="twitter:card" content="summary"><meta data-vue-tag="ssr" name="twitter:site" content="@RyujinxEmu"><meta data-vue-tag="ssr" name="twitter:title" content="Ryujinx - Nintendo Switch Emulator"><meta data-vue-tag="ssr" name="twitter:image" content="https://ryujinx.org/public/logo.png"><meta data-vue-tag="ssr" name="twitter:description" content="Ryujinx is an open source Nintendo Switch emulator written in C# for Windows and Linux."><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/assets/static/favicon.ce0531f.04f13339f4481e7a56ec570fe806f861.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/assets/static/favicon.ac8d93a.04f13339f4481e7a56ec570fe806f861.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/assets/static/favicon.b9532cc.04f13339f4481e7a56ec570fe806f861.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/assets/static/favicon.f22e9f3.04f13339f4481e7a56ec570fe806f861.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/assets/static/favicon.1539b60.04f13339f4481e7a56ec570fe806f861.png"><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap"><link rel="preload" href="/assets/css/1.styles.772c319b.css" as="style"><link rel="preload" href="/assets/js/app.9fd85704.js" as="script"><link rel="stylesheet" href="/assets/css/1.styles.772c319b.css"><style data-vue-tag="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}
+.v-application .ryu_blue {
+  background-color: #02c5e5 !important;
+  border-color: #02c5e5 !important;
+}
+.v-application .ryu_blue--text {
+  color: #02c5e5 !important;
+  caret-color: #02c5e5 !important;
+}
+.v-application .ryu_blue.lighten-5 {
+  background-color: #cfffff !important;
+  border-color: #cfffff !important;
+}
+.v-application .ryu_blue--text.text--lighten-5 {
+  color: #cfffff !important;
+  caret-color: #cfffff !important;
+}
+.v-application .ryu_blue.lighten-4 {
+  background-color: #afffff !important;
+  border-color: #afffff !important;
+}
+.v-application .ryu_blue--text.text--lighten-4 {
+  color: #afffff !important;
+  caret-color: #afffff !important;
+}
+.v-application .ryu_blue.lighten-3 {
+  background-color: #8fffff !important;
+  border-color: #8fffff !important;
+}
+.v-application .ryu_blue--text.text--lighten-3 {
+  color: #8fffff !important;
+  caret-color: #8fffff !important;
+}
+.v-application .ryu_blue.lighten-2 {
+  background-color: #6efeff !important;
+  border-color: #6efeff !important;
+}
+.v-application .ryu_blue--text.text--lighten-2 {
+  color: #6efeff !important;
+  caret-color: #6efeff !important;
+}
+.v-application .ryu_blue.lighten-1 {
+  background-color: #48e1ff !important;
+  border-color: #48e1ff !important;
+}
+.v-application .ryu_blue--text.text--lighten-1 {
+  color: #48e1ff !important;
+  caret-color: #48e1ff !important;
+}
+.v-application .ryu_blue.darken-1 {
+  background-color: #00aac9 !important;
+  border-color: #00aac9 !important;
+}
+.v-application .ryu_blue--text.text--darken-1 {
+  color: #00aac9 !important;
+  caret-color: #00aac9 !important;
+}
+.v-application .ryu_blue.darken-2 {
+  background-color: #008fad !important;
+  border-color: #008fad !important;
+}
+.v-application .ryu_blue--text.text--darken-2 {
+  color: #008fad !important;
+  caret-color: #008fad !important;
+}
+.v-application .ryu_blue.darken-3 {
+  background-color: #007593 !important;
+  border-color: #007593 !important;
+}
+.v-application .ryu_blue--text.text--darken-3 {
+  color: #007593 !important;
+  caret-color: #007593 !important;
+}
+.v-application .ryu_blue.darken-4 {
+  background-color: #005c79 !important;
+  border-color: #005c79 !important;
+}
+.v-application .ryu_blue--text.text--darken-4 {
+  color: #005c79 !important;
+  caret-color: #005c79 !important;
+}
+.v-application .ryu_orange {
+  background-color: #ff5f55 !important;
+  border-color: #ff5f55 !important;
+}
+.v-application .ryu_orange--text {
+  color: #ff5f55 !important;
+  caret-color: #ff5f55 !important;
+}
+.v-application .ryu_orange.lighten-5 {
+  background-color: #ffefd8 !important;
+  border-color: #ffefd8 !important;
+}
+.v-application .ryu_orange--text.text--lighten-5 {
+  color: #ffefd8 !important;
+  caret-color: #ffefd8 !important;
+}
+.v-application .ryu_orange.lighten-4 {
+  background-color: #ffd1bd !important;
+  border-color: #ffd1bd !important;
+}
+.v-application .ryu_orange--text.text--lighten-4 {
+  color: #ffd1bd !important;
+  caret-color: #ffd1bd !important;
+}
+.v-application .ryu_orange.lighten-3 {
+  background-color: #ffb4a1 !important;
+  border-color: #ffb4a1 !important;
+}
+.v-application .ryu_orange--text.text--lighten-3 {
+  color: #ffb4a1 !important;
+  caret-color: #ffb4a1 !important;
+}
+.v-application .ryu_orange.lighten-2 {
+  background-color: #ff9887 !important;
+  border-color: #ff9887 !important;
+}
+.v-application .ryu_orange--text.text--lighten-2 {
+  color: #ff9887 !important;
+  caret-color: #ff9887 !important;
+}
+.v-application .ryu_orange.lighten-1 {
+  background-color: #ff7b6e !important;
+  border-color: #ff7b6e !important;
+}
+.v-application .ryu_orange--text.text--lighten-1 {
+  color: #ff7b6e !important;
+  caret-color: #ff7b6e !important;
+}
+.v-application .ryu_orange.darken-1 {
+  background-color: #df423d !important;
+  border-color: #df423d !important;
+}
+.v-application .ryu_orange--text.text--darken-1 {
+  color: #df423d !important;
+  caret-color: #df423d !important;
+}
+.v-application .ryu_orange.darken-2 {
+  background-color: #bf2127 !important;
+  border-color: #bf2127 !important;
+}
+.v-application .ryu_orange--text.text--darken-2 {
+  color: #bf2127 !important;
+  caret-color: #bf2127 !important;
+}
+.v-application .ryu_orange.darken-3 {
+  background-color: #a00012 !important;
+  border-color: #a00012 !important;
+}
+.v-application .ryu_orange--text.text--darken-3 {
+  color: #a00012 !important;
+  caret-color: #a00012 !important;
+}
+.v-application .ryu_orange.darken-4 {
+  background-color: #810000 !important;
+  border-color: #810000 !important;
+}
+.v-application .ryu_orange--text.text--darken-4 {
+  color: #810000 !important;
+  caret-color: #810000 !important;
+}</style><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-app="true" data-server-rendered="true" id="app" id="app" class="v-application v-application--is-ltr theme--light" data-v-e3225a78><div class="v-application--wrap"><div data-v-e3225a78></div><header class="v-sheet theme--light v-toolbar v-app-bar v-app-bar--fixed" style="height:64px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;" data-v-e3225a78><div class="v-toolbar__content" style="height:64px;"><button type="button" class="v-app-bar__nav-icon hidden-md-and-up mr-0 v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default" data-v-e3225a78><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fas fa-bars theme--light" data-v-e3225a78></i></span></button><div class="v-avatar ml-3 mr-1 rounded-0" style="height:32px;min-width:32px;width:32px;" data-v-e3225a78><img alt="Ryujinx" src="data:image/svg+xml,%3csvg fill='none' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cdefs%3e%3cfilter id='__svg-blur-cc365a6f959d3922c45e66d1d7062f3e'%3e%3cfeGaussianBlur in='SourceGraphic' stdDeviation='40'/%3e%3c/filter%3e%3c/defs%3e%3cimage x='0' y='0' filter='url(%23__svg-blur-cc365a6f959d3922c45e66d1d7062f3e)' width='32' height='32' xlink:href='data:image/png%3bbase64%2ciVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAALNUlEQVR42uVbCXBTxxneXdk00HSGKU1JSKdpmpJO0rSFJhACSYAhBBNqsCzZumzJkg%2bKE5iGc1KStE1bhrNJSzgCodCmHAFzlFIgXI5tyVcM2NicTowPyTLEt40v2W/77773ZNnYgEHGfo5m/vl39z096fv2//893r8ISR9sm4/wkfNyFZG0MpX32qGckTipyEIcro3Y7iwBTUEESeRyKzlTTfH/zpn49x0uFba9iRTzkcHjXXZEcuoIL5%2b48mMAzEA3Qxsl2bWUpJdRH%2bC%2b4iHn6inek7qEfxcIQFaFEIB3pYj6k5OIXPKI4JOLLQC8hYEiqaUcINQ9nXqdl6Fd4AQASTghfYFIgFMFbQoAD6YPoEWzz6oQwX9euIj3dpqbgWthAEE4aAls9xYgE2AHF7A7FUDAwbOidpRyn8eJBSZu7g5XGwBolXtYAk5vISIBu1MXyDFAOf6fVIj5n7Y7HwKpIBnXqC/4bnr8ZgJygID/nFkkE6AIF0BLViGSXaOS/P5j3ovM99vB0zsUHgMgXizxNwE5IUFcb544AXnMWkQtYUiQNC8zDfU20EyOvjqR30%2b3vI/eHvWz2zw9pYT3viql%2bLsA%2bGsW5UG39RB8r1rApjG/4Drhxeduey%2bNDMU03qyiUeGqGxGhYttbr6OMGa90/QWV5KsQtKLI2RoqR/q7IkCMAQt7IwYcnjTOW24yqQn0PAYrEAXKYAG4S0KsOlWBdgYvVxhCkCdK1%2bmOxGL%2bRwenurZgNuSJwx3tIXjfUWChvy3APn0yB7dv8vgRzRGaTAB/AYDnguYiMG3W5oHOAUmuN6l3gKtofZ9RbQwhEiEofcYUnys7L/ILwzPcBxFYACfgzoJeNxOhNGkU8N88IHHaRE5AwsQXnvREaiiNNlBq04Hob5ZokFgjv6fNrL3QHKnxzsagzDsb3AO59bOk1vXZ/OGPZro/QzCV5VPaeyEgIW1B%2b1R4vl8I%2bLydgCeaIkIboNcFsIBWag7jAr0OWss1F7PWw68zkmZHMCJOloYHD2XPAMvgJLh1wZI7bMzhDx%2bR6T4qEeC5C/D3i4CfAAFN0IMUAApABO0kAhAgeMucJG0zswhmDbWm0GHsOY0RGm71dZFhjIDsgUQA9QHPrvN7BEZCjJG2mrVZ8jMLw4MRnRMxYAmgEnDB5z5uCUACH6ap5AoDmgBOgmgFjIg26Xv1XxtCRnAXMKnxgCdAtgRJe5grwGzxDfY8gVvBN4AArzuw0QKGSdAO7gYmNfrmECCOEG28bNVVtn2w4nt9EgPwkpWifmsNwguXI7xgGa//auG7XC%2bLi0Yrt25Gy/bs4vXlO/7lFwK8Q6RZS4UYU4Ow9aMn%2boaAvAZR/zcHqSj1zt9peZOoTTA8eRup3yzAGxAZAbGmJrr1o5H3n4DUyyL4Y5c6NAdIQGnwyz6rGOolwl8EUB8ChL4gAJ/IR7Bc5r%2bHdyY/jE99lQOiYXXrpk8Dma6yGZ6pizFllc2xPsXq5bMt2N8E0L4iAOnjED6cKy6/92dN4/uOmdefZvWP/7ySE9Bi1ceyaO2KjxvC6vXRpl4hoG9cgAFPEZffOM29FFad%2baw86HAeor%2bdw9ubzGH76s3a09wL5hrwdk0IUiwByPAbprnwHeLFKxCpo%2bLOc1KRA6eUHOIr0eMXIR4K/O80RGoKmy3h6zkBMUbVww8O6ccEyBsnTLOdpM4E8J0mJ%2bbWYHeqAHCA6nIrQX/bHQDlcpxc9Ef%2bF1b9/QGma2ZHDW%2bNCm9siDZO5e5gCRsE7qDKU09X9V8LaN896kAAAwxtXW5T4VT3cDD/2u%2bcyn/Mt73eZgzzWMLLu5sQ7Zk4TlEWECjtDD0N5Q0A%2bAMgZS2UV0L5YEBKSRPKrFj75oZ/r6WmWRtro01rPFHh52CeXtdo1a9rturWg6xrsur/UWUz8t3Q/ZPHP6kYArDdNUiyBAuUr8L1bLg3FzOdUiIEppRUoS8qT69evS6P6n%2bd12zVn2NTVSDA3WYJzwY5D5ILFnHFZdKMZc860O8IuL0LdP0iJrm4EK6/49v26I5EAhZQ02gz6rt3AQUGQemNE/h9KZHeGj8G0kJSSyew%2buIPt3FLaY42amiMgZ63GH7K6rVGNaFB4xGdOQnlzHyVKG4Y5FE/qYgBZuAxRPwAMe/AbcX2Ekp2pz7C6hlvL%2bUE1EdotrZawmtWaMJ4/ZrVSMrjLLgyNhIlTZukwHmAT4IFr0sLH5xUuBfIudrZvGECdMYTpdvBx/8HOl5Lkt4LKIuAQ%2beIamcyhh4PJMnFgarLngD0w6cIWEUR3Luc3RO/adeQzPfm4atvzB4Gvc%2biv4W158%2bdM9ixeFHgpXlzBhfEx%2bHDLz6rJALEN0Noe1IAmPoJcIFKllYD4oJyicrubEPp1ypHHs52Nlj1ZRD4ylqidNfYH4RyNZTdTMAaaoGQYyiPovxRjyuPAJxWNggATwDgU7k4XGNxYsEqFjCRozT0%2bX2OifVWQ1BlrHkMAN0M4Kug/EpdtGkKzAmmgA6qjon4OXtWthKDIIz1N70chbY/ABlfdm4H8Nubo3Q7uxr6wBrQsakvYWWOAnYn4eIolWaFriSQD1l59IG0bzF9OcbybfD/KgBq44shm2EQWABhUhUTyf%2bbMkcBNg9ILkYw3ovZJ6crHwIyGmER9Bqrz924nZPijo18gb3ULDSox/C6KZTkzn3d75uifUMAs4RTX6mkXMOZJP0axTuTH2f1Xb97hxPQZDXY2AiQYTE%2byAmI0uPr8TEDgwDobTbtDRAzz66uAQu4LoMqio8NkPw/oTkqXNwA0c8gV%2bfPQ2NnaAYOASTVjaWJ0Tho47ueQ0/lY6qbzn8e1v9B5Rbd85wASyg%2brg7ulfcC3ROwwZsf0CsuwMtSHBC3xErat8KNwT65PWrcmy9Guidgkzc/4IgPAYLfLEBaEbLRAMp8PB928goSrHrZAkiVRSemr0SGoJO2qPtMwJEC/uND00s/RWyX1p8E9KNXY90TYHcGSNli75HcGwyImCPYcxKUSYBslgB4FMsPwnIi9N2mySnOAhILUEB2DZb8NI2crZZzBWkPXUGhBLA/m3GdSBF6Jsmq6JAsie13TIJCXaCVIrz6E0TYfr345mYvOd/ESGiSrQA7nMKAJQD/aWOH8RmmrkMB/FkpabpJTpn1yRoXlEqA0OXbYfGghEyCaAVHzzMSkpklsNMizCV8EqilPGJnJw2jh8%2bJEZYpqpgYwE%2bNpJbKW9bi4uXdtQTKfwVSGnka/BflQIZbtoQ2GC3aSEcRCZBSZdmRGdR/LaBR2LZpZMe9%2bpNfts/aJEuQVnE/gPbfQ9sVAH%2bDOEopBM2bBcghF5qZBXjT5f11aMqvKTKMCJuhVlj//iM3/RCxuxh4JMUCNjq0H51b9c9AIOBHAOyXoMeAifuIi8lzUB6HD5z%2bvmQBqF9midl0zBIuNqxcRro9RIU/u%2bhNW8HHL2PZLe704%2b%2bjMvecJ9ieMsvzBKH%2bF3H1GXZrXBgmSd7P%2bFcIXryCkHzKtrb5wqajiIsdvD8LyyT46%2bCkPxIlvbnD8N0qYwjfbK0zqkmPOpZx0hfHmu6BAMEnS7SFZ4maw7aJyRcGkqt%2bTRmn2u6GAKEjeA%2b16liidEWZfhZPma81qTFSyqeHBPhmiAs8VR7As3q9KfQlX9%2bvMYUODAK8QU4a6thBCWby/J5YE7u3us2sfVk6LuM9NrN09DPKIEA%2bM3Sr/ADvSRG4xs8OxZm4BbREahKqTGqeiuORzwzFGlGDOUwxHoCSgsQXI3sn8TNDjV1bgFYmoRp8PRsi/Ba471nvnqPc83FG1BgRipaMFs8i/h97b8y2A7ZgEAAAAABJRU5ErkJggg==' /%3e%3c/svg%3e" width="32" data-src="/assets/static/logo.ac8d93a.c7d5247c4e21936f0cf55433166e280d.png" data-srcset="/assets/static/logo.ac8d93a.c7d5247c4e21936f0cf55433166e280d.png 32w" data-sizes="(max-width: 32px) 100vw, 32px" class="g-image g-image--lazy g-image--loading" data-v-e3225a78><noscript data-v-e3225a78><img src="/assets/static/logo.ac8d93a.c7d5247c4e21936f0cf55433166e280d.png" class="g-image g-image--loaded" width="32" alt="Ryujinx"></noscript></div><div class="v-toolbar__title ml-2" data-v-e3225a78>Ryujinx - Nintendo Switch Emulator</div><div class="spacer" data-v-e3225a78></div><div class="v-toolbar__items hidden-sm-and-down hidden-lg-and-up" data-v-e3225a78><a href="/" aria-current="page" class="v-btn--active v-btn v-btn--flat v-btn--router v-btn--text theme--light v-size--default" data-v-e3225a78><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fas fa-home theme--light" data-v-e3225a78></i></span></a><a href="https://blog.ryujinx.org/" class="v-btn v-btn--flat v-btn--text theme--light v-size--default" data-v-e3225a78><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fas fa-newspaper theme--light" data-v-e3225a78></i></span></a><a href="/download" class="v-btn v-btn--flat v-btn--router v-btn--text theme--light v-size--default" data-v-e3225a78><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fas fa-download theme--light" data-v-e3225a78></i></span></a><a href="/contribute" class="v-btn v-btn--flat v-btn--router v-btn--text theme--light v-size--default" data-v-e3225a78><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fas fa-code theme--light" data-v-e3225a78></i></span></a><a href="https://github.com/Ryujinx/Ryujinx/wiki/Ryujinx-Setup-&amp;-Configuration-Guide" class="v-btn v-btn--flat v-btn--text theme--light v-size--default" data-v-e3225a78><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fas fa-info-circle theme--light" data-v-e3225a78></i></span></a><a href="https://github.com/Ryujinx/Ryujinx/wiki/Frequently-Asked-Questions" class="v-btn v-btn--flat v-btn--text theme--light v-size--default" data-v-e3225a78><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fas fa-question-circle theme--light" data-v-e3225a78></i></span></a><a href="https://github.com/Ryujinx/Ryujinx-Games-List/issues" target="_blank" rel="noopener" class="v-btn v-btn--flat v-btn--text theme--light v-size--default" data-v-e3225a78><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fas fa-gamepad theme--light" data-v-e3225a78></i></span></a><a href="https://patreon.com/Ryujinx" class="v-btn v-btn--flat v-btn--text theme--light v-size--default red--text" data-v-e3225a78><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fab fa-patreon theme--light" data-v-e3225a78></i></span></a><a href="https://github.com/Ryujinx/Ryujinx" class="v-btn v-btn--flat v-btn--text theme--light v-size--default green--text" data-v-e3225a78><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fab fa-github theme--light" data-v-e3225a78></i></span></a><a href="https://twitter.com/RyujinxEmu" class="v-btn v-btn--flat v-btn--text theme--light v-size--default blue--text" data-v-e3225a78><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fab fa-twitter theme--light" data-v-e3225a78></i></span></a><a href="https://discord.gg/VkQYXAZ" class="v-btn v-btn--flat v-btn--text theme--light v-size--default" style="color:#7289DA;caret-color:#7289DA;" data-v-e3225a78><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fab fa-discord theme--light" data-v-e3225a78></i></span></a></div><div class="v-toolbar__items hidden-md-and-down" data-v-e3225a78><a href="/" aria-current="page" class="v-btn--active v-btn v-btn--flat v-btn--router v-btn--text theme--light v-size--default" data-v-e3225a78><span class="v-btn__content">Home</span></a><a href="https://blog.ryujinx.org/" class="v-btn v-btn--flat v-btn--text theme--light v-size--default" data-v-e3225a78><span class="v-btn__content">Blog</span></a><a href="/download" class="v-btn v-btn--flat v-btn--router v-btn--text theme--light v-size--default" data-v-e3225a78><span class="v-btn__content">Download</span></a><a href="/contribute" class="v-btn v-btn--flat v-btn--router v-btn--text theme--light v-size--default" data-v-e3225a78><span class="v-btn__content">Contribute</span></a><a href="https://github.com/Ryujinx/Ryujinx/wiki/Ryujinx-Setup-&amp;-Configuration-Guide" target="_blank" rel="noopener" class="v-btn v-btn--flat v-btn--text theme--light v-size--default" data-v-e3225a78><span class="v-btn__content">Guide</span></a><a href="https://github.com/Ryujinx/Ryujinx/wiki/Frequently-Asked-Questions" target="_blank" rel="noopener" class="v-btn v-btn--flat v-btn--text theme--light v-size--default" data-v-e3225a78><span class="v-btn__content">FAQ</span></a><a href="https://github.com/Ryujinx/Ryujinx-Games-List/issues" target="_blank" rel="noopener" class="v-btn v-btn--flat v-btn--text theme--light v-size--default" data-v-e3225a78><span class="v-btn__content">Compatibility</span></a><a href="https://patreon.com/Ryujinx" class="v-btn v-btn--flat v-btn--text theme--light v-size--default red--text" data-v-e3225a78><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fab fa-patreon theme--light" data-v-e3225a78></i></span></a><a href="https://github.com/Ryujinx/Ryujinx" class="v-btn v-btn--flat v-btn--text theme--light v-size--default green--text" data-v-e3225a78><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fab fa-github theme--light" data-v-e3225a78></i></span></a><a href="https://twitter.com/RyujinxEmu" class="v-btn v-btn--flat v-btn--text theme--light v-size--default blue--text" data-v-e3225a78><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fab fa-twitter theme--light" data-v-e3225a78></i></span></a><a href="https://discord.gg/VkQYXAZ" class="v-btn v-btn--flat v-btn--text theme--light v-size--default" style="color:#7289DA;caret-color:#7289DA;" data-v-e3225a78><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fab fa-discord theme--light" data-v-e3225a78></i></span></a></div><div class="v-toolbar__items ml-0 mr-2" data-v-e3225a78><button type="button" class="v-btn v-btn--flat v-btn--text theme--light v-size--default" data-v-e3225a78><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fas fa-moon theme--light" data-v-e3225a78></i></span></button></div></div></header><main class="v-main" style="padding-top:64px;padding-right:0px;padding-bottom:0px;padding-left:0px;" data-v-e3225a78><div class="v-main__wrap"><div><section><div fluid="" class="v-parallax" style="height:600px;"><div class="v-parallax__image-container"><img src="/assets/img/wallp.cff345bc.png" alt="Parallax wallpaper" class="v-parallax__image" style="display:block;opacity:0;transform:translate(-50%, 0px);"></div><div class="v-parallax__content"><div class="row align-center justify-center"><div class="text-center col"><img alt="Ryujinx" src="data:image/svg+xml,%3csvg fill='none' viewBox='0 0 128 128' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cdefs%3e%3cfilter id='__svg-blur-cc365a6f959d3922c45e66d1d7062f3e'%3e%3cfeGaussianBlur in='SourceGraphic' stdDeviation='40'/%3e%3c/filter%3e%3c/defs%3e%3cimage x='0' y='0' filter='url(%23__svg-blur-cc365a6f959d3922c45e66d1d7062f3e)' width='128' height='128' xlink:href='data:image/png%3bbase64%2ciVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAALNUlEQVR42uVbCXBTxxneXdk00HSGKU1JSKdpmpJO0rSFJhACSYAhBBNqsCzZumzJkg%2bKE5iGc1KStE1bhrNJSzgCodCmHAFzlFIgXI5tyVcM2NicTowPyTLEt40v2W/77773ZNnYgEHGfo5m/vl39z096fv2//893r8ISR9sm4/wkfNyFZG0MpX32qGckTipyEIcro3Y7iwBTUEESeRyKzlTTfH/zpn49x0uFba9iRTzkcHjXXZEcuoIL5%2b48mMAzEA3Qxsl2bWUpJdRH%2bC%2b4iHn6inek7qEfxcIQFaFEIB3pYj6k5OIXPKI4JOLLQC8hYEiqaUcINQ9nXqdl6Fd4AQASTghfYFIgFMFbQoAD6YPoEWzz6oQwX9euIj3dpqbgWthAEE4aAls9xYgE2AHF7A7FUDAwbOidpRyn8eJBSZu7g5XGwBolXtYAk5vISIBu1MXyDFAOf6fVIj5n7Y7HwKpIBnXqC/4bnr8ZgJygID/nFkkE6AIF0BLViGSXaOS/P5j3ovM99vB0zsUHgMgXizxNwE5IUFcb544AXnMWkQtYUiQNC8zDfU20EyOvjqR30%2b3vI/eHvWz2zw9pYT3viql%2bLsA%2bGsW5UG39RB8r1rApjG/4Drhxeduey%2bNDMU03qyiUeGqGxGhYttbr6OMGa90/QWV5KsQtKLI2RoqR/q7IkCMAQt7IwYcnjTOW24yqQn0PAYrEAXKYAG4S0KsOlWBdgYvVxhCkCdK1%2bmOxGL%2bRwenurZgNuSJwx3tIXjfUWChvy3APn0yB7dv8vgRzRGaTAB/AYDnguYiMG3W5oHOAUmuN6l3gKtofZ9RbQwhEiEofcYUnys7L/ILwzPcBxFYACfgzoJeNxOhNGkU8N88IHHaRE5AwsQXnvREaiiNNlBq04Hob5ZokFgjv6fNrL3QHKnxzsagzDsb3AO59bOk1vXZ/OGPZro/QzCV5VPaeyEgIW1B%2b1R4vl8I%2bLydgCeaIkIboNcFsIBWag7jAr0OWss1F7PWw68zkmZHMCJOloYHD2XPAMvgJLh1wZI7bMzhDx%2bR6T4qEeC5C/D3i4CfAAFN0IMUAApABO0kAhAgeMucJG0zswhmDbWm0GHsOY0RGm71dZFhjIDsgUQA9QHPrvN7BEZCjJG2mrVZ8jMLw4MRnRMxYAmgEnDB5z5uCUACH6ap5AoDmgBOgmgFjIg26Xv1XxtCRnAXMKnxgCdAtgRJe5grwGzxDfY8gVvBN4AArzuw0QKGSdAO7gYmNfrmECCOEG28bNVVtn2w4nt9EgPwkpWifmsNwguXI7xgGa//auG7XC%2bLi0Yrt25Gy/bs4vXlO/7lFwK8Q6RZS4UYU4Ow9aMn%2boaAvAZR/zcHqSj1zt9peZOoTTA8eRup3yzAGxAZAbGmJrr1o5H3n4DUyyL4Y5c6NAdIQGnwyz6rGOolwl8EUB8ChL4gAJ/IR7Bc5r%2bHdyY/jE99lQOiYXXrpk8Dma6yGZ6pizFllc2xPsXq5bMt2N8E0L4iAOnjED6cKy6/92dN4/uOmdefZvWP/7ySE9Bi1ceyaO2KjxvC6vXRpl4hoG9cgAFPEZffOM29FFad%2baw86HAeor%2bdw9ubzGH76s3a09wL5hrwdk0IUiwByPAbprnwHeLFKxCpo%2bLOc1KRA6eUHOIr0eMXIR4K/O80RGoKmy3h6zkBMUbVww8O6ccEyBsnTLOdpM4E8J0mJ%2bbWYHeqAHCA6nIrQX/bHQDlcpxc9Ef%2bF1b9/QGma2ZHDW%2bNCm9siDZO5e5gCRsE7qDKU09X9V8LaN896kAAAwxtXW5T4VT3cDD/2u%2bcyn/Mt73eZgzzWMLLu5sQ7Zk4TlEWECjtDD0N5Q0A%2bAMgZS2UV0L5YEBKSRPKrFj75oZ/r6WmWRtro01rPFHh52CeXtdo1a9rturWg6xrsur/UWUz8t3Q/ZPHP6kYArDdNUiyBAuUr8L1bLg3FzOdUiIEppRUoS8qT69evS6P6n%2bd12zVn2NTVSDA3WYJzwY5D5ILFnHFZdKMZc860O8IuL0LdP0iJrm4EK6/49v26I5EAhZQ02gz6rt3AQUGQemNE/h9KZHeGj8G0kJSSyew%2buIPt3FLaY42amiMgZ63GH7K6rVGNaFB4xGdOQnlzHyVKG4Y5FE/qYgBZuAxRPwAMe/AbcX2Ekp2pz7C6hlvL%2bUE1EdotrZawmtWaMJ4/ZrVSMrjLLgyNhIlTZukwHmAT4IFr0sLH5xUuBfIudrZvGECdMYTpdvBx/8HOl5Lkt4LKIuAQ%2beIamcyhh4PJMnFgarLngD0w6cIWEUR3Luc3RO/adeQzPfm4atvzB4Gvc%2biv4W158%2bdM9ixeFHgpXlzBhfEx%2bHDLz6rJALEN0Noe1IAmPoJcIFKllYD4oJyicrubEPp1ypHHs52Nlj1ZRD4ylqidNfYH4RyNZTdTMAaaoGQYyiPovxRjyuPAJxWNggATwDgU7k4XGNxYsEqFjCRozT0%2bX2OifVWQ1BlrHkMAN0M4Kug/EpdtGkKzAmmgA6qjon4OXtWthKDIIz1N70chbY/ABlfdm4H8Nubo3Q7uxr6wBrQsakvYWWOAnYn4eIolWaFriSQD1l59IG0bzF9OcbybfD/KgBq44shm2EQWABhUhUTyf%2bbMkcBNg9ILkYw3ovZJ6crHwIyGmER9Bqrz924nZPijo18gb3ULDSox/C6KZTkzn3d75uifUMAs4RTX6mkXMOZJP0axTuTH2f1Xb97hxPQZDXY2AiQYTE%2byAmI0uPr8TEDgwDobTbtDRAzz66uAQu4LoMqio8NkPw/oTkqXNwA0c8gV%2bfPQ2NnaAYOASTVjaWJ0Tho47ueQ0/lY6qbzn8e1v9B5Rbd85wASyg%2brg7ulfcC3ROwwZsf0CsuwMtSHBC3xErat8KNwT65PWrcmy9Guidgkzc/4IgPAYLfLEBaEbLRAMp8PB928goSrHrZAkiVRSemr0SGoJO2qPtMwJEC/uND00s/RWyX1p8E9KNXY90TYHcGSNli75HcGwyImCPYcxKUSYBslgB4FMsPwnIi9N2mySnOAhILUEB2DZb8NI2crZZzBWkPXUGhBLA/m3GdSBF6Jsmq6JAsie13TIJCXaCVIrz6E0TYfr345mYvOd/ESGiSrQA7nMKAJQD/aWOH8RmmrkMB/FkpabpJTpn1yRoXlEqA0OXbYfGghEyCaAVHzzMSkpklsNMizCV8EqilPGJnJw2jh8%2bJEZYpqpgYwE%2bNpJbKW9bi4uXdtQTKfwVSGnka/BflQIZbtoQ2GC3aSEcRCZBSZdmRGdR/LaBR2LZpZMe9%2bpNfts/aJEuQVnE/gPbfQ9sVAH%2bDOEopBM2bBcghF5qZBXjT5f11aMqvKTKMCJuhVlj//iM3/RCxuxh4JMUCNjq0H51b9c9AIOBHAOyXoMeAifuIi8lzUB6HD5z%2bvmQBqF9midl0zBIuNqxcRro9RIU/u%2bhNW8HHL2PZLe704%2b%2bjMvecJ9ieMsvzBKH%2bF3H1GXZrXBgmSd7P%2bFcIXryCkHzKtrb5wqajiIsdvD8LyyT46%2bCkPxIlvbnD8N0qYwjfbK0zqkmPOpZx0hfHmu6BAMEnS7SFZ4maw7aJyRcGkqt%2bTRmn2u6GAKEjeA%2b16liidEWZfhZPma81qTFSyqeHBPhmiAs8VR7As3q9KfQlX9%2bvMYUODAK8QU4a6thBCWby/J5YE7u3us2sfVk6LuM9NrN09DPKIEA%2bM3Sr/ADvSRG4xs8OxZm4BbREahKqTGqeiuORzwzFGlGDOUwxHoCSgsQXI3sn8TNDjV1bgFYmoRp8PRsi/Ba471nvnqPc83FG1BgRipaMFs8i/h97b8y2A7ZgEAAAAABJRU5ErkJggg==' /%3e%3c/svg%3e" width="128" data-src="/assets/static/logo.6ddb45f.c7d5247c4e21936f0cf55433166e280d.png" data-srcset="/assets/static/logo.6ddb45f.c7d5247c4e21936f0cf55433166e280d.png 128w" data-sizes="(max-width: 128px) 100vw, 128px" class="mb-5 g-image g-image--lazy g-image--loading"><noscript><img src="/assets/static/logo.6ddb45f.c7d5247c4e21936f0cf55433166e280d.png" class="mb-5 g-image g-image--loaded" width="128" alt="Ryujinx"></noscript><p class="display-1">A simple, experimental Nintendo Switch emulator.</p></div></div></div></div></section><section><div class="row mt-5 align-center"><div class="container container--fluid"><div class="row align-start justify-center"><div class="col-md-6 col-12"><div class="text-center"><p class="display-1">What is Ryujinx?</p><span class="subheading"><small><em>(REE-YOU-JINX)</em></small><p class="my-2">Ryujinx is an open-source Nintendo Switch emulator created by gdkchan and written in C#.</p><p class="my-2">This emulator aims at providing excellent accuracy and performance, a user-friendly interface, and consistent builds.</p><p class="my-2">Ryujinx is available on GitHub under the MIT license.</p><div class="text-center"><a href="https://github.com/Ryujinx/Ryujinx-Games-List/issues" class="ma-2 v-btn v-btn--contained theme--dark v-size--default ryu_blue"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate ml-n1 mr-2 fas fa-gamepad theme--dark"></i> Game compatibility list
+                  </span></a><a href="/download" class="ma-2 v-btn v-btn--contained v-btn--router theme--dark v-size--default ryu_orange"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate ml-n1 mr-2 fas fa-download theme--dark"></i> Download the latest build
+                  </span></a></div></span></div></div></div></div><div class="container"><div class="row align-start"><div class="col-md-4 col-12"><div class="elevation-0 transparent v-card v-sheet theme--light"><div class="v-card__text text-center"><i aria-hidden="true" class="v-icon notranslate --text text--lighten-2 fab fa-github theme--light" style="font-size:40px;"></i></div><div primary-title="" class="v-card__title layout justify-center"><div class="display-1 text-center">Where can I grab it?</div></div><div class="v-card__text text-center">
+                  You can download the latest pre-compiled build <a href="/download">here</a>, or you may build directly from the Ryujinx source code repository by following the guide <a href="/build">here</a>.
+                </div></div></div><div class="col-md-4 col-12"><div class="elevation-0 transparent v-card v-sheet theme--light"><div class="v-card__text text-center"><i aria-hidden="true" class="v-icon notranslate --text text--lighten-2 fas fa-code theme--light" style="font-size:40px;"></i></div><div primary-title="" class="v-card__title layout justify-center"><div class="display-1 text-center">How can I contribute?</div></div><div class="v-card__text text-center">Please visit the contributing tab for more information.</div></div></div><div class="col-md-4 col-12"><div class="elevation-0 transparent v-card v-sheet theme--light"><div class="v-card__text text-center"><i aria-hidden="true" class="v-icon notranslate --text text--lighten-2 fas fa-gamepad theme--light" style="font-size:40px;"></i></div><div primary-title="" class="v-card__title layout justify-center"><div class="display-1 text-center">How well does it work?</div></div><div class="v-card__text text-center">As of January 2022, Ryujinx has been tested on nearly 3,500 titles: ~3,200 boot past menus and into gameplay, with approximately 2,500 of those being considered playable. See the compatibility list <a href="https://github.com/Ryujinx/Ryujinx-Games-List" rel="noopener" target="_blank">here</a>.</div></div></div></div></div></div><div class="v-parallax hidden-sm-and-down" style="height:200px;"><div class="v-parallax__image-container"><img src="/assets/img/wallp2.c7e1a71c.png" alt="" class="v-parallax__image" style="display:block;opacity:0;transform:translate(-50%, 0px);"></div><div class="v-parallax__content"></div></div><div class="row align-center"><div class="container"><div class="row align-start"><div class="col-md-4 col-12"><div class="elevation-0 transparent v-card v-sheet theme--light"><div class="v-card__text text-center"><i aria-hidden="true" class="v-icon notranslate --text text--lighten-2 mr-4 fab fa-windows theme--light" style="font-size:40px;"></i><i aria-hidden="true" class="v-icon notranslate --text text--lighten-2 mr-4 fab fa-apple theme--light" style="font-size:40px;"></i><i aria-hidden="true" class="v-icon notranslate --text text--lighten-2 fab fa-linux theme--light" style="font-size:40px;"></i></div><div primary-title="" class="v-card__title layout justify-center"><div class="display-1 text-center">Platforms</div></div><div class="v-card__text text-center">Ryujinx is currently available for Windows 10+ and Linux (macOS support is planned).</div></div></div><div class="col-md-4 col-12"><div class="elevation-0 transparent v-card v-sheet theme--light"><div class="v-card__text text-center"><i aria-hidden="true" class="v-icon notranslate --text text--lighten-2 fab fa-discord theme--light" style="font-size:40px;"></i></div><div primary-title="" class="v-card__title layout justify-center"><div class="display-1 text-center">Discord</div></div><div class="v-card__text text-center">
+                  Join the <a href="https://discord.gg/VkQYXAZ" rel="noopener" target="_blank">Ryujinx Discord server</a>! You can get help,
+                  as well as converse with fellow users and developers.
+                </div></div></div><div class="col-md-4 col-12"><div class="elevation-0 transparent v-card v-sheet theme--light"><div class="v-card__text text-center"><i aria-hidden="true" class="v-icon notranslate --text text--lighten-2 fab fa-nintendo-switch theme--light" style="font-size:40px;"></i></div><div primary-title="" class="v-card__title layout justify-center"><div class="display-1 text-center">Why the name?</div></div><div class="v-card__text text-center">
+                  The name Ryujinx is based on the name &quot;Ryujin.&quot;
+                  In other words, a name for a Mythical (Sea-God) Dragon.
+                  More information can be found here.
+                  The name stems from Ryu (as already explained), then RyuJIT;
+                  which is the codename for the JIT compiler for .NET Core.
+                  The NX part of the name is from the Codename of the Switch itself.
+                </div></div></div></div></div></div><div class="v-parallax hidden-sm-and-down" style="height:200px;"><div class="v-parallax__image-container"><img src="/assets/img/wallp3.9c6adb93.png" alt="" class="v-parallax__image" style="display:block;opacity:0;transform:translate(-50%, 0px);"></div><div class="v-parallax__content"></div></div><div class="row align-center"><div class="container"><div class="row align-start justify-center"><div class="col col-12"><div class="elevation-0 transparent v-card v-sheet theme--light"><div class="v-card__text text-center"><i aria-hidden="true" class="v-icon notranslate --text text--lighten-2 fas fa-users theme--light" style="font-size:40px;"></i></div><div primary-title="" class="v-card__title layout justify-center"><div class="display-1 text-center">Our Team</div></div></div></div></div><div class="row align-start justify-center"><div class="col-sm-4 col-md-2 col-12"><div class="elevation-0 transparent v-card v-sheet theme--light"><div class="v-card__text text-center"><div class="v-avatar" style="height:72px;min-width:72px;width:72px;"><img alt="gdkchan" src="https://avatars2.githubusercontent.com/u/5624669?s=72&amp;v=4" class="g-image"></div></div><div primary-title="" class="v-card__title layout justify-center"><a href="https://github.com/gdkchan" rel="noopener" target="_blank" class="headline text-center">gdkchan</a></div><div class="v-card__text text-center"><p class="title">Lead Developer</p><!----></div></div></div><div class="col-sm-4 col-md-2 col-12"><div class="elevation-0 transparent v-card v-sheet theme--light"><div class="v-card__text text-center"><div class="v-avatar" style="height:72px;min-width:72px;width:72px;"><img alt="Ac_K" src="https://avatars3.githubusercontent.com/u/4905390?s=72&amp;v=4" class="g-image"></div></div><div primary-title="" class="v-card__title layout justify-center"><a href="https://github.com/AcK77" rel="noopener" target="_blank" class="headline text-center">Ac_K</a></div><div class="v-card__text text-center"><p class="title">Developer</p><!----></div></div></div><div class="col-sm-4 col-md-2 col-12"><div class="elevation-0 transparent v-card v-sheet theme--light"><div class="v-card__text text-center"><div class="v-avatar" style="height:72px;min-width:72px;width:72px;"><img alt="Thog" src="https://avatars3.githubusercontent.com/u/1760003?s=72&amp;v=4" class="g-image"></div></div><div primary-title="" class="v-card__title layout justify-center"><a href="https://github.com/Thog" rel="noopener" target="_blank" class="headline text-center">Thog</a></div><div class="v-card__text text-center"><p class="title">Developer</p><!----></div></div></div><div class="col-sm-4 col-md-2 col-12"><div class="elevation-0 transparent v-card v-sheet theme--light"><div class="v-card__text text-center"><div class="v-avatar" style="height:72px;min-width:72px;width:72px;"><img alt="riperiperi" src="https://avatars3.githubusercontent.com/u/6294155?s=72&amp;v=4" class="g-image"></div></div><div primary-title="" class="v-card__title layout justify-center"><a href="https://github.com/riperiperi" rel="noopener" target="_blank" class="headline text-center">riperiperi</a></div><div class="v-card__text text-center"><p class="title">Developer</p><!----></div></div></div><div class="col-sm-4 col-md-2 col-12"><div class="elevation-0 transparent v-card v-sheet theme--light"><div class="v-card__text text-center"><div class="v-avatar" style="height:72px;min-width:72px;width:72px;"><img alt="LDj3SNuD" src="https://avatars3.githubusercontent.com/u/35856442?s=72&amp;v=4" class="g-image"></div></div><div primary-title="" class="v-card__title layout justify-center"><a href="https://github.com/LDj3SNuD" rel="noopener" target="_blank" class="headline text-center">LDj3SNuD</a></div><div class="v-card__text text-center"><p class="title">Developer</p><!----></div></div></div><div class="col-sm-4 col-md-2 col-12"><div class="elevation-0 transparent v-card v-sheet theme--light"><div class="v-card__text text-center"><div class="v-avatar" style="height:72px;min-width:72px;width:72px;"><img alt="emmauss" src="https://avatars3.githubusercontent.com/u/5307160?s=72&amp;v=4" class="g-image"></div></div><div primary-title="" class="v-card__title layout justify-center"><a href="https://github.com/emmauss" rel="noopener" target="_blank" class="headline text-center">emmauss</a></div><div class="v-card__text text-center"><p class="title">Developer</p><!----></div></div></div><div class="col-sm-4 col-md-2 col-12"><div class="elevation-0 transparent v-card v-sheet theme--light"><div class="v-card__text text-center"><div class="v-avatar" style="height:72px;min-width:72px;width:72px;"><img alt="Moosehunter" src="https://avatars0.githubusercontent.com/u/601603?s=72&amp;v=4" class="g-image"></div></div><div primary-title="" class="v-card__title layout justify-center"><a href="https://github.com/Thealexbarney" rel="noopener" target="_blank" class="headline text-center">Moosehunter</a></div><div class="v-card__text text-center"><p class="title">Developer</p><!----></div></div></div><div class="col-sm-4 col-md-2 col-12"><div class="elevation-0 transparent v-card v-sheet theme--light"><div class="v-card__text text-center"><div class="v-avatar" style="height:72px;min-width:72px;width:72px;"><img alt="Lordmau5" src="https://avatars0.githubusercontent.com/u/1345036?s=72&amp;v=4" class="g-image"></div></div><div primary-title="" class="v-card__title layout justify-center"><a href="https://github.com/Lordmau5" rel="noopener" target="_blank" class="headline text-center">Lordmau5</a></div><div class="v-card__text text-center"><p class="title">Web Designer</p><!----></div></div></div></div></div></div></section></div></div></main><aside class="v-navigation-drawer v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile v-navigation-drawer--temporary theme--light" style="height:100%;top:0px;transform:translateX(-100%);width:256px;" data-v-e3225a78><div class="v-navigation-drawer__content"><div role="list" class="v-list v-sheet theme--light" data-v-e3225a78><a href="/" aria-current="page" tabindex="0" role="listitem" class="v-list-item--active v-list-item v-list-item--link theme--light" data-v-e3225a78><div class="v-list-item__action" data-v-e3225a78><i aria-hidden="true" class="v-icon notranslate fas fa-home theme--light" data-v-e3225a78></i></div><div class="v-list-item__title" data-v-e3225a78>Home</div></a><a tabindex="0" href="https://blog.ryujinx.org/" role="listitem" class="v-list-item v-list-item--link theme--light" data-v-e3225a78><div class="v-list-item__action" data-v-e3225a78><i aria-hidden="true" class="v-icon notranslate fas fa-newspaper theme--light" data-v-e3225a78></i></div><div class="v-list-item__title" data-v-e3225a78>Blog</div></a><a href="/download" tabindex="0" role="listitem" class="v-list-item v-list-item--link theme--light" data-v-e3225a78><div class="v-list-item__action" data-v-e3225a78><i aria-hidden="true" class="v-icon notranslate fas fa-download theme--light" data-v-e3225a78></i></div><div class="v-list-item__title" data-v-e3225a78>Download</div></a><a href="/contribute" tabindex="0" role="listitem" class="v-list-item v-list-item--link theme--light" data-v-e3225a78><div class="v-list-item__action" data-v-e3225a78><i aria-hidden="true" class="v-icon notranslate fas fa-code theme--light" data-v-e3225a78></i></div><div class="v-list-item__title" data-v-e3225a78>Contribute</div></a><a tabindex="0" href="https://github.com/Ryujinx/Ryujinx/wiki/Ryujinx-Setup-&amp;-Configuration-Guide" target="_blank" rel="noopener" role="listitem" class="v-list-item v-list-item--link theme--light" data-v-e3225a78><div class="v-list-item__action" data-v-e3225a78><i aria-hidden="true" class="v-icon notranslate fas fa-info-circle theme--light" data-v-e3225a78></i></div><div class="v-list-item__title" data-v-e3225a78>Guide</div></a><a tabindex="0" href="https://github.com/Ryujinx/Ryujinx/wiki/Frequently-Asked-Questions" target="_blank" rel="noopener" role="listitem" class="v-list-item v-list-item--link theme--light" data-v-e3225a78><div class="v-list-item__action" data-v-e3225a78><i aria-hidden="true" class="v-icon notranslate fas fa-question-circle theme--light" data-v-e3225a78></i></div><div class="v-list-item__title" data-v-e3225a78>FAQ</div></a><a tabindex="0" href="https://github.com/Ryujinx/Ryujinx-Games-List/issues" target="_blank" rel="noopener" role="listitem" class="v-list-item v-list-item--link theme--light" data-v-e3225a78><div class="v-list-item__action" data-v-e3225a78><i aria-hidden="true" class="v-icon notranslate fas fa-gamepad theme--light" data-v-e3225a78></i></div><div class="v-list-item__title" data-v-e3225a78>Game Compatibility</div></a><hr role="separator" aria-orientation="horizontal" class="v-divider theme--light" data-v-e3225a78><a tabindex="0" href="https://patreon.com/Ryujinx" role="listitem" class="v-list-item v-list-item--link theme--light red--text" data-v-e3225a78><div class="v-list-item__action" data-v-e3225a78><i aria-hidden="true" class="v-icon notranslate fab fa-patreon theme--light red--text" data-v-e3225a78></i></div><div class="v-list-item__title" data-v-e3225a78>Patreon</div></a><a tabindex="0" href="https://github.com/Ryujinx/Ryujinx" role="listitem" class="v-list-item v-list-item--link theme--light green--text" data-v-e3225a78><div class="v-list-item__action" data-v-e3225a78><i aria-hidden="true" class="v-icon notranslate fab fa-github theme--light green--text" data-v-e3225a78></i></div><div class="v-list-item__title" data-v-e3225a78>GitHub</div></a><a tabindex="0" href="https://twitter.com/RyujinxEmu" role="listitem" class="v-list-item v-list-item--link theme--light blue--text" data-v-e3225a78><div class="v-list-item__action" data-v-e3225a78><i aria-hidden="true" class="v-icon notranslate fab fa-twitter theme--light blue--text" data-v-e3225a78></i></div><div class="v-list-item__title" data-v-e3225a78>Twitter</div></a><a tabindex="0" href="https://discord.gg/VkQYXAZ" role="listitem" class="v-list-item v-list-item--link theme--light" style="color:#7289DA;caret-color:#7289DA;" data-v-e3225a78><div class="v-list-item__action" data-v-e3225a78><i aria-hidden="true" class="v-icon notranslate fab fa-discord theme--light" style="color:#7289DA;caret-color:#7289DA;" data-v-e3225a78></i></div><div class="v-list-item__title" data-v-e3225a78>Discord</div></a></div></div><div class="v-navigation-drawer__border"></div></aside><footer class="v-footer text-center v-sheet theme--light" data-v-e3225a78><div class="text-left col" data-v-e3225a78><div class="v-card__text py-2 text-center" data-v-e3225a78>
+      Website designed by
+      <a rel="noopener" target="_blank" href="https://twitter.com/Lordmau5" data-v-e3225a78>Lordmau5</a></div></div><div class="text-right col" data-v-e3225a78><div class="v-card__text py-2 text-center" data-v-e3225a78>
+      Ryujinx © 2022
+    </div></div></footer></div></div>
+    <script>window.__INITIAL_STATE__={"data":{"teams":{"edges":[{"node":{"id":"196ad140","name":"gdkchan","github":"gdkchan","avatar":"https:\u002F\u002Favatars2.githubusercontent.com\u002Fu\u002F5624669?s=72&v=4","title":"Lead Developer"}},{"node":{"id":"079af158","name":"Ac_K","github":"AcK77","avatar":"https:\u002F\u002Favatars3.githubusercontent.com\u002Fu\u002F4905390?s=72&v=4","title":"Developer"}},{"node":{"id":"85ae2d44","name":"Thog","github":"Thog","avatar":"https:\u002F\u002Favatars3.githubusercontent.com\u002Fu\u002F1760003?s=72&v=4","title":"Developer"}},{"node":{"id":"585ecfb6","name":"riperiperi","github":"riperiperi","avatar":"https:\u002F\u002Favatars3.githubusercontent.com\u002Fu\u002F6294155?s=72&v=4","title":"Developer"}},{"node":{"id":"5f5168f3","name":"LDj3SNuD","github":"LDj3SNuD","avatar":"https:\u002F\u002Favatars3.githubusercontent.com\u002Fu\u002F35856442?s=72&v=4","title":"Developer"}},{"node":{"id":"4df39dd6","name":"emmauss","github":"emmauss","avatar":"https:\u002F\u002Favatars3.githubusercontent.com\u002Fu\u002F5307160?s=72&v=4","title":"Developer"}},{"node":{"id":"3ba78aca","name":"Moosehunter","github":"Thealexbarney","avatar":"https:\u002F\u002Favatars0.githubusercontent.com\u002Fu\u002F601603?s=72&v=4","title":"Developer"}},{"node":{"id":"3ff3b6c0","name":"Lordmau5","github":"Lordmau5","avatar":"https:\u002F\u002Favatars0.githubusercontent.com\u002Fu\u002F1345036?s=72&v=4","title":"Web Designer"}}]},"extraPagesInfo":{"path":"\u002F","title":"Nintendo Switch Emulator","keywords":["home"]}},"context":{}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/assets/js/app.9fd85704.js" defer></script>
+  </body>
+</html>

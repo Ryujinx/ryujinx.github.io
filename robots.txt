@@ -1,0 +1,2 @@
+Sitemap: https://ryujinx.org/sitemap.xml
+Host: https://ryujinx.org
